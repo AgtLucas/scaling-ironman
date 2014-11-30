@@ -6,6 +6,7 @@ var templates = {
 };
 
 var controllers = {
+  'home/index': require('../client/js/controllers/home/index.js')
 };
 
 var routes = [
