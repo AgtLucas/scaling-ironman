@@ -1,0 +1,19 @@
+{
+  "name": "scaling-ironman",
+  "version": "1.0.0",
+  "description": "scaling-ironman ===============",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgtLucas/scaling-ironman.git"
+  },
+  "author": "Lucas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AgtLucas/scaling-ironman/issues"
+  },
+  "homepage": "https://github.com/AgtLucas/scaling-ironman"
+}
