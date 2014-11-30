@@ -5,10 +5,22 @@ try {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-
+;var locals_for_with = (locals || {});(function (model, partial) {
 jade_debug.unshift({ lineno: 0, filename: "views/layout.jade" });
-jade_debug.shift();;return buf.join("");
+jade_debug.unshift({ lineno: 1, filename: "views/layout.jade" });
+buf.push("<title>" + (jade.escape(null == (jade_interp = model.title) ? "" : jade_interp)));
+jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
+jade_debug.shift();
+buf.push("</title>");
+jade_debug.shift();
+jade_debug.unshift({ lineno: 2, filename: "views/layout.jade" });
+buf.push("<main>" + (null == (jade_interp = partial) ? "" : jade_interp));
+jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
+jade_debug.shift();
+buf.push("</main>");
+jade_debug.shift();
+jade_debug.shift();}.call(this,"model" in locals_for_with?locals_for_with.model:typeof model!=="undefined"?model:undefined,"partial" in locals_for_with?locals_for_with.partial:typeof partial!=="undefined"?partial:undefined));;return buf.join("");
 } catch (err) {
-  jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "");
+  jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "title=model.title\nmain!=partial");
 }
 }
