@@ -6,7 +6,7 @@ var express = require('express');
 var app = express();
 var options = {
   routes: require('./routes'),
-  layout: require('./layout')
+  layout: require('./.bin/views/layout')
 };
 
 taunusExpress(taunus, app, options);
